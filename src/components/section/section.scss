@@ -1,0 +1,168 @@
+:root{
+    --background-image: url('/src/assets/images/background.jpg');
+    --hrqirmizi:red;
+    --image1:url('/src/assets/images/sekil1.jpg');
+    --image2:url('/src/assets/images/sekil2.jpg');
+    --image3:url('/src/assets/images/sekil3.jpg');
+    --image4:url('/src/assets/images/sekil4.jpg');
+    --hrag:white; 
+    --psize:2rem;
+    --borderradius:0.8rem;
+    --pcolor:white;
+    --butonbackcolor:red; 
+    --butoncolor:white;
+    --h1color:red;
+    --h2color:white; 
+    --xetbutonbackcolor:black;
+    --sekilyazicolor:red; 
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.section{
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2rem 3rem 0rem 3rem;
+    justify-content: space-between;
+   
+    padding-bottom: 10rem;
+
+        p{
+            font-size: var(--psize);
+            color: var(--butonbackcolor);
+            font-weight: 700;
+        }
+        span{
+            color: var(--pcolor);
+        }
+    .hamsi{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .image1{
+
+        height: 21rem;
+        width: 15rem;
+        background-image: var(--image1);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction:column;
+        justify-content: space-between;
+        &:hover{
+            height: 23rem;
+           
+            transition: 0.5s ease;
+        }
+    }
+    .image2{
+
+        height: 23rem;
+        width: 15rem;
+        background-image: var(--image2);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction:column;
+        justify-content: space-between;
+            span{
+                bottom: -20rem;
+            }
+            &:hover{
+                 height: 21rem;
+                
+                width: 15rem;
+                transition: 1s ease;
+            }
+    }
+    .image3{
+
+        height: 23rem;
+        width: 15rem;
+        background-image: var(--image3);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction:column;
+        justify-content: space-between;
+        span{
+            bottom: -20rem;
+        }
+        &:hover{
+            height: 21rem;
+            transition: 1s ease;
+        }
+    }
+    .image4{
+
+        height: 21rem;
+        width: 15rem;
+        background-image: var(--image4);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction:column;
+        justify-content: space-between;
+        &:hover{
+            height: 23rem;
+            transition: 1s ease;
+        }
+    }
+}
+@media screen and (max-width:768px) {
+        
+    .section {
+        display: flex; /* Yatay sıralama */
+        gap: 16px; /* Aralarına boşluk eklemek için */
+         /* Yatay kaydırma */
+        padding: 16px;
+        overflow-y: hidden;
+         /* Tarayıcı için ince kaydırma çubuğu */
+        scroll-behavior: smooth; /* Pürüzsüz kaydırma */
+        
+        /* Kaydırma çubuğu tasarımı (yalnızca modern tarayıcılar için) */
+        &::-webkit-scrollbar {
+          height: 8px;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: #888;
+          border-radius: 4px;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+          background: #555;
+        }
+      }
+        .image {
+            min-width: 300px; /* Her bir öğenin minimum genişliği */
+            height: 15rem   ;
+            border-radius: 8px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 16px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+          
+            p {
+              font-size: 24px;
+              font-weight: bold;
+              margin: 0;
+            }
+            span {
+              font-size: 16px;
+            }
+        }
+    }
+    
